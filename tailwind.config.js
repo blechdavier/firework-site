@@ -6,8 +6,9 @@ export default {
     extend: {
       fontFamily: {
         'display': ['Yeseva One', ...defaultTheme.fontFamily.serif],
+        'body': ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
-    }
+    },
   },
   plugins: [require('tailwindcss-bg-patterns'),],
 }
