@@ -15,6 +15,8 @@
 
 	let rainbowText: HTMLParagraphElement;
 
+	let copyMessage = 'Click to copy';
+
 	let start = Date.now();
 
 	function updateRainbowText(start: number) {
@@ -38,7 +40,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" />
 
-<section class="h-screen bg-cover bg-center bg-[url(earth.webp)] flex flex-col">
+<section class="h-screen flex flex-col relative">
+	<img class="absolute inset-0 w-full h-full object-cover -z-10" src="earth.webp" alt="space background"/>
 	<div class="flex flex-col items-center justify-center flex-grow">
 		<h1 class="text-5xl sm:text-8xl font-bold text-white/70 tracking-wider sm:mt-8">Firework</h1>
 		<div class="h-0 px-4 mb-5 sm:mb-0">
@@ -110,12 +113,35 @@
 		<div class="p-8">
 			<p class="text-sm text-white/70">Step 2</p>
 			<p class="text-5xl font-extrabold">Add Server:</p>
-			<p
-				class="text-3xl sm:text-5xl font-mono bg-slate-900 rounded-md p-2 mt-2 inline-block"
-				bind:this={rainbowText}
+			<div
+				class="text-3xl relative sm:text-5xl font-mono bg-slate-900 rounded-md p-2 mt-2 inline-block overflow-hidden"
 			>
-				firework.gg
-			</p>
+				<p bind:this={rainbowText}>firework.gg</p>
+				<button
+					class="absolute inset-0 opacity-0 hover:opacity-95 bg-slate-900 flex items-center justify-center transition-opacity duration-200"
+					on:click={() => {
+						// Copy the text inside the text field
+						navigator.clipboard.writeText('firework.gg');
+						alert('Copied to clipboard!');
+					}}
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-8 h-8"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
+						/>
+					</svg>
+					<p class="text-white/90 text-xl font-medium ml-2">{copyMessage}</p>
+				</button>
+			</div>
 		</div>
 	</div>
 	<h2 class="text-white/90 text-4xl font-medium mb-4 mt-8">Project Statistics</h2>
