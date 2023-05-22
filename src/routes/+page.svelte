@@ -118,7 +118,7 @@
 			</p>
 		</div>
 	</div>
-	<h2 class="text-white/90 text-4xl font-medium mb-4 mt-8">Most Realest Statistics&trade;</h2>
+	<h2 class="text-white/90 text-4xl font-medium mb-4 mt-8">Project Statistics</h2>
 	<div
 		class="rounded-2xl grid lg:grid-cols-4 text-white shadow-xl bg-gradient-to-br from-slate-700 to-slate-800"
 	>
@@ -139,7 +139,7 @@
 			<p class="text-6xl font-extrabold">1K+</p>
 		</div>
 	</div>
-	<h2 class="text-white/90 text-4xl font-medium mb-4 mt-8">Project Description ong fr fr 🔥🔥</h2>
+	<h2 class="text-white/90 text-4xl font-medium mb-4 mt-8">Project Description</h2>
 
 	<article class="rounded-2xl p-8 shadow-xl bg-gradient-to-br from-slate-700 to-slate-800">
 		<div>
@@ -183,7 +183,7 @@
 			<div
 				class="-ml-10 md:-ml-16 w-[calc(100%+80px)] md:w-[calc(100%+128px)] shadow-xl rounded-2xl p-4 bg-gradient-to-br from-slate-600 to-slate-700 my-12"
 			>
-				<h2 class="text-4xl font-bold text-white mb-6 mt-2">Image Carousel</h2>
+				<h2 class="text-4xl font-bold text-white mb-4">Image Carousel</h2>
 
 				<div
 					class="aspect-video relative bg-stone-700 overflow-hidden rounded-md md:rounded-2xl shadow-xl"
@@ -199,15 +199,6 @@
 						{/each}
 					</div>
 				</div>
-				<button
-					on:click={prev}
-					class="font-bold text-xl bg-slate-600 rounded-2xl p-4 shadow-xl mt-4"
-					>Previous Image</button
-				>
-				<button
-					on:click={next}
-					class="font-bold text-xl bg-slate-600 rounded-2xl p-4 shadow-xl mt-4">Next Image</button
-				>
 			</div>
 		</div>
 
