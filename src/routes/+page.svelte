@@ -41,7 +41,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" />
 
 <section class="h-screen flex flex-col relative">
-	<img class="absolute inset-0 w-full h-full object-cover -z-10" src="earth.webp" alt="space background"/>
+	<img
+		class="absolute inset-0 w-full h-full object-cover -z-10"
+		src="earth.webp"
+		alt="space background"
+	/>
 	<div class="flex flex-col items-center justify-center flex-grow">
 		<h1 class="text-5xl sm:text-8xl font-bold text-white/70 tracking-wider sm:mt-8">Firework</h1>
 		<div class="h-0 px-4 mb-5 sm:mb-0">
@@ -114,14 +118,14 @@
 			<p class="text-sm text-white/70">Step 2</p>
 			<p class="text-5xl font-extrabold">Add Server:</p>
 			<div
-				class="text-3xl relative sm:text-5xl font-mono bg-slate-900 rounded-md p-2 mt-2 inline-block overflow-hidden"
+				class="text-3xl relative sm:text-5xl lg:text-3xl xl:text-5xl font-mono bg-slate-900 rounded-md p-2 mt-2 inline-block overflow-hidden"
 			>
-				<p bind:this={rainbowText}>firework.gg</p>
+				<p bind:this={rainbowText}>mc.firework.gg</p>
 				<button
 					class="absolute inset-0 opacity-0 hover:opacity-95 bg-slate-900 flex items-center justify-center transition-opacity duration-200"
 					on:click={() => {
 						// Copy the text inside the text field
-						navigator.clipboard.writeText('firework.gg');
+						navigator.clipboard.writeText('mc.firework.gg');
 						alert('Copied to clipboard!');
 					}}
 				>
