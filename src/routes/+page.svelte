@@ -36,9 +36,9 @@
 	setInterval(() => updateRainbowText(start), 1000 / 10);
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" />
+<svelte:head>
+	<title>Firework</title>
+</svelte:head>
 
 <section class="h-screen flex flex-col relative">
 	<img
@@ -162,7 +162,7 @@
 		</div>
 		<div class="p-8 border-slate-800/70 border-b lg:border-b-0 lg:border-r">
 			<p class="text-sm text-white/70">GitHub Commits</p>
-			<p class="text-6xl font-extrabold">260+</p>
+			<p class="text-6xl font-extrabold">290+</p>
 		</div>
 		<div class="p-8">
 			<p class="text-sm text-white/70">Concurrent Players/Machine</p>
